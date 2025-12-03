@@ -1,0 +1,57 @@
+{
+    // 1.Python 直譯器(Python Interpreter)路徑設定
+    "python.pythonPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe", // 虛擬環境中的 Python
+    "python.formatting.provider": "none",
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "black-formatter.args": [
+        "--line-length",
+        "88"
+    ],
+    // 4.Python 單元測試框架(Python Testing)設定
+    "python.testing.framework": "pytest",
+    "python.testing.pytestArgs": [
+        "tests" // 指定測試檔案所在的目錄
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.noseTestEnabled": false,
+    //5. Python 靜態類型檢查工具(Python Type Checking)設定
+    "python.typeChecking.tool": "mypy",
+    "python.typeChecking.mypyArgs": [
+        "--strict",
+        "--ignore-missing-imports"
+    ],
+    // 6. 除錯時的工作目錄設定
+    "python.testing.cwd": "${workspaceFolder}/tests",
+    // 7. 自動完成的搜尋路徑設定
+    "python.autoComplete.extraPaths": [
+        "./lib",
+        "./src"
+    ],
+    // 8. VSCode 編輯器相關設定
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": true,
+    "editor.wordWrap": "on",
+    "files.encoding": "utf8", // 檔案編碼設定
+    "files.eol": "\n", // 使用 Unix 換行符號
+    // 9. VSCode 的其他設定
+    "python.linting.pylintEnabled": true,
+    "files.trimTrailingWhitespace": true, // 儲存的時候，會幫你自動過濾多餘的空格
+    "files.autoSave": "onFocusChange", // 是否自動儲存檔案
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true,
+    "editor.guides.indentation": true,
+    // 10. Jupyter Interactive Window 設定
+    //"jupyter.interactiveWindow.creationMode":"perFile" , // 每個檔案使用各自的互動視窗
+    "jupyter.interactiveWindow.creationMode": "single", // 所有檔案共用同一個互動視窗
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true
+}

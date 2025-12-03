@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(.venvScriptsactivate)",
+      "Bash(pip install:*)",
+      "Bash(.venv/Scripts/python.exe -m pip install:*)",
+      "Bash(.venv/Scripts/python.exe -m pip uninstall:*)",
+      "Bash(.venv/Scripts/python.exe -m streamlit:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(findstr:*)",
+      "Bash(D:\\Python\\demo\\crawlerdemo\\.venv\\Scripts\\python.exe:*)",
+      "Bash(D:Pythondemocrawlerdemo.venvScriptspython.exe -m pip list)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
